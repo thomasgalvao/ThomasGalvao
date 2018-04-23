@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6999DDD20881C4B00B90C3D /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDC20881C4B00B90C3D /* AddProductViewController.swift */; };
+		C6999DDF20881CE200B90C3D /* AddEditProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDE20881CE200B90C3D /* AddEditProductTableViewController.swift */; };
 		C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB048220880E540029D2B4 /* AppDelegate.swift */; };
 		C6CB048520880E540029D2B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB048420880E540029D2B4 /* ViewController.swift */; };
 		C6CB048820880E540029D2B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048620880E540029D2B4 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6999DDC20881C4B00B90C3D /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		C6999DDE20881CE200B90C3D /* AddEditProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductTableViewController.swift; sourceTree = "<group>"; };
 		C6CB047F20880E540029D2B4 /* ThomasGalvao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThomasGalvao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CB048220880E540029D2B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6CB048420880E540029D2B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C6CB048420880E540029D2B4 /* ViewController.swift */,
+				C6999DDC20881C4B00B90C3D /* AddProductViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				C6CB048E20880E540029D2B4 /* LaunchScreen.storyboard */,
 				C6CB049120880E540029D2B4 /* Info.plist */,
 				C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */,
+				C6999DDE20881CE200B90C3D /* AddEditProductTableViewController.swift */,
 			);
 			path = ThomasGalvao;
 			sourceTree = "<group>";
@@ -277,7 +283,9 @@
 			files = (
 				C6CB048B20880E540029D2B4 /* ThomasGalvao.xcdatamodeld in Sources */,
 				C6CB048520880E540029D2B4 /* ViewController.swift in Sources */,
+				C6999DDD20881C4B00B90C3D /* AddProductViewController.swift in Sources */,
 				C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */,
+				C6999DDF20881CE200B90C3D /* AddEditProductTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
