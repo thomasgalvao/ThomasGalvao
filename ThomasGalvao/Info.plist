@@ -2,8 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Precisamos que permita acessar suas fotos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Precisamos que permita acessar suas fotos.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Por favor, preciso da sua autorização.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Precisamos que permita acessar suas fotos.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDisplayName</key>
 	<string>ComprasUSA</string>
 	<key>CFBundleExecutable</key>
