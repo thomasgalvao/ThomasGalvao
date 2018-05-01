@@ -88,7 +88,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3US-6T-3gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-805.79710144927537" y="572.28260869565224"/>
+            <point key="canvasLocation" x="-1901" y="571"/>
+        </scene>
+        <!--Ajustes-->
+        <scene sceneID="NQO-w1-CHY">
+            <objects>
+                <viewController id="NXK-hi-jBQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e0u-AP-2fs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sP0-8a-1S4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="BSD-qt-xtj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEe-WS-FnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="-245"/>
+        </scene>
+        <!--Total da Compra-->
+        <scene sceneID="pmM-vM-DO8">
+            <objects>
+                <viewController id="HfT-d0-1bO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7cZ-Hd-vvu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dCW-aT-vAS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Total da Compra" image="bag" id="qST-fl-i7T"/>
+                    <navigationItem key="navigationItem" id="le8-a6-xkM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9a3-PY-jie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="-245"/>
         </scene>
         <!--Cadastrar Produto-->
         <scene sceneID="9oW-mO-Fk7">
@@ -133,6 +166,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-2A-vRU">
                                 <rect key="frame" x="374" y="326" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="NXK-hi-jBQ" kind="show" id="xjl-is-fuW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cartão?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR4-al-xPy">
                                 <rect key="frame" x="267" y="368" width="65" height="30"/>
@@ -145,7 +181,7 @@
                                 <rect key="frame" x="337" y="368" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-ig-7zL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-ig-7zL">
                                 <rect key="frame" x="16" y="118" width="380" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -175,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDA-2d-kGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="1317"/>
+            <point key="canvasLocation" x="-1901" y="1335"/>
         </scene>
         <!--Cadastrar Produto-->
         <scene sceneID="k2X-oW-8Mx">
@@ -195,7 +231,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7s-Lb-KCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-804" y="-197"/>
+            <point key="canvasLocation" x="-1901" y="-244"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="l3w-B2-bl2">
@@ -209,6 +245,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="1hb-MU-5vJ" kind="relationship" relationship="viewControllers" id="DZh-JJ-Ug9"/>
+                        <segue destination="NXK-hi-jBQ" kind="relationship" relationship="viewControllers" id="U5C-zq-ueJ"/>
+                        <segue destination="HfT-d0-1bO" kind="relationship" relationship="viewControllers" id="fSu-IG-U5k"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sr8-3N-4Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,5 +257,9 @@
     <resources>
         <image name="bag" width="23" height="23"/>
         <image name="product" width="378" height="226"/>
+        <image name="settings" width="23" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xjl-is-fuW"/>
+    </inferredMetricsTieBreakers>
 </document>

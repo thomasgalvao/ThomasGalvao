@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThomasGalvao/Product/ProductTableViewCell.swift"
-            timestampString = "546906569.775492"
+            timestampString = "546909490.667882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThomasGalvao/Product/ProductRegisterViewController.swift"
-            timestampString = "546906569.776018"
+            timestampString = "546909490.6683249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "addUpdateProduct(_:)"
             landmarkType = "7">
          </BreakpointContent>

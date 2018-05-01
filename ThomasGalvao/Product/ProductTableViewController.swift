@@ -18,7 +18,7 @@ class ProductTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 106
         tableView.rowHeight = UITableViewAutomaticDimension
-        label.text = "Sem Produtos Cadastrados"
+        label.text = "Sua lista está vazia!"
         label.textAlignment = .center
         //label.textColor = .white
         
