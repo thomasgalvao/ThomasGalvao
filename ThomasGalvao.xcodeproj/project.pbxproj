@@ -15,8 +15,6 @@
 		C6CB048B20880E540029D2B4 /* ThomasGalvao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */; };
 		C6CB048D20880E540029D2B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048C20880E540029D2B4 /* Assets.xcassets */; };
 		C6CB049020880E540029D2B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048E20880E540029D2B4 /* LaunchScreen.storyboard */; };
-		C6CB049B20880E550029D2B4 /* ThomasGalvaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB049A20880E550029D2B4 /* ThomasGalvaoTests.swift */; };
-		C6CB04A620880E550029D2B4 /* ThomasGalvaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB04A520880E550029D2B4 /* ThomasGalvaoUITests.swift */; };
 		C6DAAA6820912A7D00163072 /* UIViewControler+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA6720912A7D00163072 /* UIViewControler+CoreData.swift */; };
 		C6DAAA6A2091357100163072 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA692091357100163072 /* ProductTableViewController.swift */; };
 		C6DAAA6E20913B4C00163072 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */; };
@@ -51,11 +49,7 @@
 		C6CB048F20880E540029D2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6CB049120880E540029D2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6CB049620880E540029D2B4 /* ThomasGalvaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThomasGalvaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6CB049A20880E550029D2B4 /* ThomasGalvaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThomasGalvaoTests.swift; sourceTree = "<group>"; };
-		C6CB049C20880E550029D2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6CB04A120880E550029D2B4 /* ThomasGalvaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThomasGalvaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6CB04A520880E550029D2B4 /* ThomasGalvaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThomasGalvaoUITests.swift; sourceTree = "<group>"; };
-		C6CB04A720880E550029D2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6DAAA6720912A7D00163072 /* UIViewControler+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControler+CoreData.swift"; sourceTree = "<group>"; };
 		C6DAAA692091357100163072 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,8 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				C6CB048120880E540029D2B4 /* ThomasGalvao */,
-				C6CB049920880E540029D2B4 /* ThomasGalvaoTests */,
-				C6CB04A420880E550029D2B4 /* ThomasGalvaoUITests */,
 				C6CB048020880E540029D2B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,24 +129,6 @@
 				C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */,
 			);
 			path = ThomasGalvao;
-			sourceTree = "<group>";
-		};
-		C6CB049920880E540029D2B4 /* ThomasGalvaoTests */ = {
-			isa = PBXGroup;
-			children = (
-				C6CB049A20880E550029D2B4 /* ThomasGalvaoTests.swift */,
-				C6CB049C20880E550029D2B4 /* Info.plist */,
-			);
-			path = ThomasGalvaoTests;
-			sourceTree = "<group>";
-		};
-		C6CB04A420880E550029D2B4 /* ThomasGalvaoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C6CB04A520880E550029D2B4 /* ThomasGalvaoUITests.swift */,
-				C6CB04A720880E550029D2B4 /* Info.plist */,
-			);
-			path = ThomasGalvaoUITests;
 			sourceTree = "<group>";
 		};
 		C6DAAA6620912A5400163072 /* Extensions */ = {
@@ -321,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6CB049B20880E550029D2B4 /* ThomasGalvaoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6CB04A620880E550029D2B4 /* ThomasGalvaoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

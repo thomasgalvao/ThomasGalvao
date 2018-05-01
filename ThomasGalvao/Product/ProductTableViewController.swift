@@ -18,9 +18,9 @@ class ProductTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 106
         tableView.rowHeight = UITableViewAutomaticDimension
-        label.text = "Sem Produtos"
+        label.text = "Sem Produtos Cadastrados"
         label.textAlignment = .center
-        label.textColor = .white
+        //label.textColor = .white
         
         loadProducts()
     }
@@ -48,19 +48,18 @@ class ProductTableViewController: UITableViewController {
     
     //Método que define a quantidade de células para cada seção de uma tableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = fetchedResultController.fetchedObjects?.count {
-            tableView.backgroundView = (count == 0) ? label : nil
-            return count
-        } else {
-            tableView.backgroundView = label
-            return 0
-        }
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        tableView.backgroundView = count == 0 ? label : nil
+        return count
     }
     
     //Método que define a célula que será apresentada em cada linha
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
-        let product = fetchedResultController.object(at: indexPath)
+        
+        guard let product = fetchedResultController.fetchedObjects?[indexPath.row] else{
+            return cell
+        }
         
         //Carrega o Nome do Produto e o Valor em Dolar
         cell.lbTitle.text = product.title
@@ -71,6 +70,8 @@ class ProductTableViewController: UITableViewController {
         } else {
             cell.ivPoster.image = nil
         }
+        
+        cell.prepare(with: product)
         
         return cell
     }

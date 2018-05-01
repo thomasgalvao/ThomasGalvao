@@ -24,5 +24,16 @@ class ProductTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func prepare(with product: Product) {
+        lbTitle.text = product.title ?? ""
+        //lbDolar. = Double(product.dolar!)!
+        
+        if let image = product.poster as? UIImage{
+            ivPoster.image = image
+        } else {
+            ivPoster.image = UIImage(named: "product")
+        }
+    }
 
 }

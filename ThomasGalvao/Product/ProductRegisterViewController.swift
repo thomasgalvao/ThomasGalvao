@@ -83,7 +83,7 @@ class ProductRegisterViewController: UIViewController {
             product = Product(context: context)
         }
         product.title = tfTitle.text!
-        product.dolar = Double(tfDolar.text!)!
+        //product.dolar = Double(tfDolar.text!)!
         if smallImage != nil {
             product.poster = smallImage
         }
@@ -92,7 +92,7 @@ class ProductRegisterViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
         
     }
     /*
