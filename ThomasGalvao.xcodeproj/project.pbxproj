@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61F7C48209966C100084A4A /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F7C47209966C100084A4A /* StateViewController.swift */; };
 		C6999DDD20881C4B00B90C3D /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDC20881C4B00B90C3D /* ProductRegisterViewController.swift */; };
 		C6999DDF20881CE200B90C3D /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */; };
 		C6999DE1208E8F6B00B90C3D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6999DE0208E8F6B00B90C3D /* Settings.bundle */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C61F7C47209966C100084A4A /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		C6999DDC20881C4B00B90C3D /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
 		C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
 		C6999DE0208E8F6B00B90C3D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C61F7C462099669C00084A4A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C61F7C47209966C100084A4A /* StateViewController.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		C6999DD82088128100B90C3D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 				C6CB049120880E540029D2B4 /* Info.plist */,
 				C6999DE0208E8F6B00B90C3D /* Settings.bundle */,
 				C6DAAA6F2091430400163072 /* Product */,
+				C61F7C462099669C00084A4A /* New Group */,
 				C6DAAA6620912A5400163072 /* Extensions */,
 				C6999DD9208812A800B90C3D /* Delegate */,
 				C6999DD82088128100B90C3D /* ViewController */,
@@ -285,6 +296,7 @@
 				C6DAAA6E20913B4C00163072 /* ProductTableViewCell.swift in Sources */,
 				C6999DDD20881C4B00B90C3D /* ProductRegisterViewController.swift in Sources */,
 				C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */,
+				C61F7C48209966C100084A4A /* StateViewController.swift in Sources */,
 				C6DAAA6820912A7D00163072 /* UIViewControler+CoreData.swift in Sources */,
 				C6DAAA6A2091357100163072 /* ProductTableViewController.swift in Sources */,
 				C6999DDF20881CE200B90C3D /* AddEditTableViewController.swift in Sources */,

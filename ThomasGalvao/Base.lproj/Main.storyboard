@@ -93,7 +93,7 @@
         <!--Ajustes-->
         <scene sceneID="NQO-w1-CHY">
             <objects>
-                <viewController id="NXK-hi-jBQ" sceneMemberID="viewController">
+                <viewController id="NXK-hi-jBQ" customClass="StateViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0u-AP-2fs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,11 +138,50 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wzz-gY-5M1">
+                                <rect key="frame" x="20" y="219" width="374" height="396"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="6Lq-Dp-w7r">
+                                    <rect key="frame" x="0.0" y="72" width="374" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellState" textLabel="eli-nT-F9R" detailTextLabel="39p-E7-vze" style="IBUITableViewCellStyleValue2" id="QEb-te-FH0">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QEb-te-FH0" id="cgb-bv-vD5">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eli-nT-F9R">
+                                                    <rect key="frame" x="20" y="14" width="91" height="15.666666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="39p-E7-vze">
+                                                    <rect key="frame" x="117" y="14" width="35" height="15.666666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.9352197017766497" green="0.13402958874768514" blue="0.097250049789586152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sP0-8a-1S4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="BSD-qt-xtj"/>
+                    <connections>
+                        <outlet property="tableView" destination="wzz-gY-5M1" id="tsu-rj-faM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEe-WS-FnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,16 +248,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-ig-7zL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-ig-7zL">
                                 <rect key="frame" x="16" y="134" width="382" height="226"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="382" id="Kdn-Rz-A4W"/>
-                                    <constraint firstAttribute="height" constant="226" id="T8U-8O-m8G"/>
-                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-n2-qQq">
                                 <rect key="frame" x="16" y="134" width="382" height="226"/>
-                                <state key="normal" title="Click"/>
                                 <connections>
                                     <action selector="btAddProduct:" destination="PFH-Qh-UU3" eventType="touchUpInside" id="5fC-Ny-gex"/>
                                 </connections>
@@ -284,7 +318,6 @@
                             <constraint firstItem="dSI-py-K36" firstAttribute="top" secondItem="Bvr-VG-B29" secondAttribute="bottom" constant="16" id="c0s-tV-dBe"/>
                             <constraint firstItem="Q62-OF-MEt" firstAttribute="trailing" secondItem="bsB-Y4-CW9" secondAttribute="trailing" constant="150" id="dOX-C2-1pc"/>
                             <constraint firstItem="oz6-2A-vRU" firstAttribute="top" secondItem="LYW-ig-7zL" secondAttribute="bottom" constant="20" id="eXM-pb-R2Q"/>
-                            <constraint firstItem="bsB-Y4-CW9" firstAttribute="top" secondItem="6VF-g3-ZI9" secondAttribute="bottom" constant="16" id="er9-eN-bgj"/>
                             <constraint firstItem="NOn-n2-qQq" firstAttribute="leading" secondItem="LYW-ig-7zL" secondAttribute="leading" id="gIO-Nt-4ss"/>
                             <constraint firstItem="GR4-al-xPy" firstAttribute="leading" secondItem="bsB-Y4-CW9" secondAttribute="trailing" constant="15" id="mPV-1q-DgG"/>
                             <constraint firstItem="Bvr-VG-B29" firstAttribute="top" secondItem="6VF-g3-ZI9" secondAttribute="bottom" constant="16" id="ngN-sQ-nny"/>
@@ -299,11 +332,12 @@
                         <viewLayoutGuide key="safeArea" id="Q62-OF-MEt"/>
                     </view>
                     <connections>
-                        <outlet property="btAddUpdate" destination="dSI-py-K36" id="H4K-b6-zva"/>
-                        <outlet property="ivPoster" destination="LYW-ig-7zL" id="8fp-t3-aDy"/>
-                        <outlet property="tfDolar" destination="bsB-Y4-CW9" id="fss-t4-nRO"/>
-                        <outlet property="tfState" destination="6VF-g3-ZI9" id="F2l-By-E9D"/>
-                        <outlet property="tfTitle" destination="gCR-CE-W8p" id="GUp-m0-gd4"/>
+                        <outlet property="btProductAddEdit" destination="dSI-py-K36" id="H4K-b6-zva"/>
+                        <outlet property="ivProductImage" destination="LYW-ig-7zL" id="8fp-t3-aDy"/>
+                        <outlet property="swProductCard" destination="Bvr-VG-B29" id="cga-l3-K8a"/>
+                        <outlet property="tfProductName" destination="gCR-CE-W8p" id="GUp-m0-gd4"/>
+                        <outlet property="tfProductPriceInDolar" destination="bsB-Y4-CW9" id="fss-t4-nRO"/>
+                        <outlet property="tfProductState" destination="6VF-g3-ZI9" id="F2l-By-E9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDA-2d-kGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -357,6 +391,6 @@
         <image name="settings" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U5C-zq-ueJ"/>
+        <segue reference="xjl-is-fuW"/>
     </inferredMetricsTieBreakers>
 </document>

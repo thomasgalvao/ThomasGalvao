@@ -63,7 +63,7 @@ class ProductTableViewController: UITableViewController {
         
         //Carrega o Nome do Produto e o Valor em Dolar
         cell.lbTitle.text = product.title
-        cell.lbDolar.text = ("product.dolar")
+        cell.lbDolar.text = String(product.dolar)
         //Carrega a Imagem
         if let image = product.poster as? UIImage {
             cell.ivPoster.image = image

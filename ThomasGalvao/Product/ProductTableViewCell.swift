@@ -27,7 +27,7 @@ class ProductTableViewCell: UITableViewCell {
     
     func prepare(with product: Product) {
         lbTitle.text = product.title ?? ""
-        //lbDolar. = Double(product.dolar!)!
+        lbDolar.text = String(product.dolar) 
         
         if let image = product.poster as? UIImage{
             ivPoster.image = image
