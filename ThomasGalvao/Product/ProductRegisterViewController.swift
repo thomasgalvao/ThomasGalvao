@@ -44,9 +44,9 @@ class ProductRegisterViewController: UIViewController {
             if let image = product.poster as? UIImage {
                 ivProductImage.image = image
             }
-            //tfProductPriceInDolar.text = String(product.dolar)
+            tfProductPriceInDolar.text = String(product.dolar)
             tfProductState.text = "Brasil"
-            //swProductCard.isOn = product.card
+            swProductCard.isOn = product.card
         }
     }
    
@@ -109,8 +109,13 @@ class ProductRegisterViewController: UIViewController {
             product = Product(context: context)
         }
         
+        
         product.title = tfProductName.text!
-        product.dolar = Double(tfProductPriceInDolar.text!)!
+        
+        if let dolar = Double(tfProductPriceInDolar.text!) {
+            product.dolar = dolar
+        }
+        //product.dolar = Double(tfProductPriceInDolar.text!)!
         product.poster = ivProductImage.image
         
         do {
