@@ -10,29 +10,28 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ivPoster: UIImageView!
+    @IBOutlet weak var ivCover: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var lbDolar: UILabel!
+    @IBOutlet weak var lbDollar: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func prepare(with product: Products) {
         lbTitle.text = product.title ?? ""
-        lbDolar.text = String(product.dollar)
+        lbDollar.text = String(product.dollar)
         
         if let image = product.cover as? UIImage{
-            ivPoster.image = image
+            ivCover.image = image
         } else {
-            ivPoster.image = UIImage(named: "product")
+            ivCover.image = UIImage(named: "cover")
         }
     }
 

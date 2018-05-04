@@ -7,22 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C61F7C48209966C100084A4A /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F7C47209966C100084A4A /* StateViewController.swift */; };
+		C601BCE0209C2397008BB9B6 /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCDF209C2397008BB9B6 /* StatesManager.swift */; };
+		C601BCE8209C9B06008BB9B6 /* TotalPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */; };
+		C601BCEA209CA76D008BB9B6 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCE9209CA76D008BB9B6 /* StatesViewController.swift */; };
+		C601BCEC209CAF13008BB9B6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCEB209CAF13008BB9B6 /* Configuration.swift */; };
+		C601BCEE209CCABE008BB9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C601BCED209CCABE008BB9B6 /* Assets.xcassets */; };
+		C601BCF0209CD1EA008BB9B6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCEF209CD1EA008BB9B6 /* PreviewViewController.swift */; };
+		C601BCF2209CDE8A008BB9B6 /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCF1209CDE8A008BB9B6 /* StatesTableViewCell.swift */; };
 		C6999DDD20881C4B00B90C3D /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDC20881C4B00B90C3D /* AddEditViewController.swift */; };
 		C6999DDF20881CE200B90C3D /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */; };
 		C6999DE1208E8F6B00B90C3D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6999DE0208E8F6B00B90C3D /* Settings.bundle */; };
 		C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB048220880E540029D2B4 /* AppDelegate.swift */; };
 		C6CB048820880E540029D2B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048620880E540029D2B4 /* Main.storyboard */; };
 		C6CB048B20880E540029D2B4 /* ThomasGalvao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */; };
-		C6CB048D20880E540029D2B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048C20880E540029D2B4 /* Assets.xcassets */; };
 		C6CB049020880E540029D2B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048E20880E540029D2B4 /* LaunchScreen.storyboard */; };
 		C6DAAA6820912A7D00163072 /* UIViewControler+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA6720912A7D00163072 /* UIViewControler+CoreData.swift */; };
-		C6DAAA6A2091357100163072 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA692091357100163072 /* ProductTableViewController.swift */; };
+		C6DAAA6A2091357100163072 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA692091357100163072 /* ProductsTableViewController.swift */; };
 		C6DAAA6E20913B4C00163072 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C61F7C47209966C100084A4A /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
+		C601BCDF209C2397008BB9B6 /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
+		C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TotalPurchasesViewController.swift; path = ../TotalPurchasesViewController.swift; sourceTree = "<group>"; };
+		C601BCE9209CA76D008BB9B6 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
+		C601BCEB209CAF13008BB9B6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		C601BCED209CCABE008BB9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C601BCEF209CD1EA008BB9B6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		C601BCF1209CDE8A008BB9B6 /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatesTableViewCell.swift; path = States/StatesTableViewCell.swift; sourceTree = "<group>"; };
 		C6999DDC20881C4B00B90C3D /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
 		C6999DE0208E8F6B00B90C3D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -30,11 +41,10 @@
 		C6CB048220880E540029D2B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6CB048720880E540029D2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6CB048A20880E540029D2B4 /* ThomasGalvao.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThomasGalvao.xcdatamodel; sourceTree = "<group>"; };
-		C6CB048C20880E540029D2B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6CB048F20880E540029D2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6CB049120880E540029D2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6DAAA6720912A7D00163072 /* UIViewControler+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControler+CoreData.swift"; sourceTree = "<group>"; };
-		C6DAAA692091357100163072 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		C6DAAA692091357100163072 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +62,10 @@
 		C61F7C462099669C00084A4A /* States */ = {
 			isa = PBXGroup;
 			children = (
-				C61F7C47209966C100084A4A /* StateViewController.swift */,
+				C601BCDF209C2397008BB9B6 /* StatesManager.swift */,
+				C601BCE9209CA76D008BB9B6 /* StatesViewController.swift */,
+				C601BCEB209CAF13008BB9B6 /* Configuration.swift */,
+				C601BCF1209CDE8A008BB9B6 /* StatesTableViewCell.swift */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -93,9 +106,10 @@
 			children = (
 				C6CB048620880E540029D2B4 /* Main.storyboard */,
 				C6CB048E20880E540029D2B4 /* LaunchScreen.storyboard */,
-				C6CB048C20880E540029D2B4 /* Assets.xcassets */,
+				C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */,
 				C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */,
 				C6CB049120880E540029D2B4 /* Info.plist */,
+				C601BCED209CCABE008BB9B6 /* Assets.xcassets */,
 				C6999DE0208E8F6B00B90C3D /* Settings.bundle */,
 				C6DAAA6F2091430400163072 /* Products */,
 				C61F7C462099669C00084A4A /* States */,
@@ -118,7 +132,8 @@
 		C6DAAA6F2091430400163072 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6DAAA692091357100163072 /* ProductTableViewController.swift */,
+				C601BCEF209CD1EA008BB9B6 /* PreviewViewController.swift */,
+				C6DAAA692091357100163072 /* ProductsTableViewController.swift */,
 				C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */,
 				C6999DDC20881C4B00B90C3D /* AddEditViewController.swift */,
 			);
@@ -185,7 +200,7 @@
 			files = (
 				C6999DE1208E8F6B00B90C3D /* Settings.bundle in Resources */,
 				C6CB049020880E540029D2B4 /* LaunchScreen.storyboard in Resources */,
-				C6CB048D20880E540029D2B4 /* Assets.xcassets in Resources */,
+				C601BCEE209CCABE008BB9B6 /* Assets.xcassets in Resources */,
 				C6CB048820880E540029D2B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,11 +215,16 @@
 				C6CB048B20880E540029D2B4 /* ThomasGalvao.xcdatamodeld in Sources */,
 				C6DAAA6E20913B4C00163072 /* ProductTableViewCell.swift in Sources */,
 				C6999DDD20881C4B00B90C3D /* AddEditViewController.swift in Sources */,
+				C601BCF2209CDE8A008BB9B6 /* StatesTableViewCell.swift in Sources */,
+				C601BCEA209CA76D008BB9B6 /* StatesViewController.swift in Sources */,
+				C601BCE0209C2397008BB9B6 /* StatesManager.swift in Sources */,
 				C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */,
-				C61F7C48209966C100084A4A /* StateViewController.swift in Sources */,
 				C6DAAA6820912A7D00163072 /* UIViewControler+CoreData.swift in Sources */,
-				C6DAAA6A2091357100163072 /* ProductTableViewController.swift in Sources */,
+				C6DAAA6A2091357100163072 /* ProductsTableViewController.swift in Sources */,
 				C6999DDF20881CE200B90C3D /* AddEditTableViewController.swift in Sources */,
+				C601BCE8209C9B06008BB9B6 /* TotalPurchasesViewController.swift in Sources */,
+				C601BCEC209CAF13008BB9B6 /* Configuration.swift in Sources */,
+				C601BCF0209CD1EA008BB9B6 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

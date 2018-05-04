@@ -20,7 +20,7 @@
 			<key>Title</key>
 			<string>Cotação do Dolar</string>
 			<key>Key</key>
-			<string>cotacao</string>
+			<string>dollar</string>
 		</dict>
 	</array>
 </dict>

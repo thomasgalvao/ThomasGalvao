@@ -17,18 +17,21 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var tfProductPriceInDolar: UITextField!
     @IBOutlet weak var swProductCard: UISwitch!
     @IBOutlet weak var btProductAddEdit: UIButton!
+    @IBOutlet weak var btImage: UIButton!
     
-    var pickerView: UIPickerView!
-    var dataSource:[String] = ["California", "New York", "Texas"]
+    var statesManager = StatesManager.shared
     var product: Products!
+    
+    lazy var pickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerView.backgroundColor = .white
+        return pickerView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        pickerView = UIPickerView() //Instanciando o UIPickerView
-        pickerView.backgroundColor = .white
-        pickerView.delegate = self  //Definindo seu delegate
-        pickerView.dataSource = self  //Definindo seu dataSource
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
         let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -40,12 +43,20 @@ class AddEditViewController: UIViewController {
         tfProductState.inputView = pickerView
         
         if product != nil {
+            title = "Editar Produto"
+            
+            btProductAddEdit.setTitle("Editar", for: .normal)
+            
             tfProductName.text = product.title
             if let image = product.cover as? UIImage {
                 ivProductImage.image = image
-            }
+             }
             tfProductPriceInDolar.text = String(product.dollar)
-            tfProductState.text = "Brasil"
+            
+            if let state = product.states, let index = statesManager.states.index(of: state) {
+                tfProductState.text = state.name
+                pickerView.selectRow(index, inComponent: 0, animated: false)
+            }
             swProductCard.isOn = product.card
         }
     }
@@ -60,8 +71,9 @@ class AddEditViewController: UIViewController {
     }
     
     @objc func done() {
-        tfProductState.text = dataSource[pickerView.selectedRow(inComponent: 0)]
-        UserDefaults.standard.set(tfProductState.text!, forKey: "state")
+        if statesManager.states.count > 0 {
+            tfProductState.text = statesManager.states[pickerView.selectedRow(inComponent: 0)].name
+        }
         cancel()
     }
     
@@ -73,8 +85,6 @@ class AddEditViewController: UIViewController {
         imagePicker.navigationBar.tintColor = UIColor(named: "main")
         present(imagePicker, animated: true, completion: nil)
     }
-    
-    
     
     // MARK: IBAction
     @IBAction func btAddProduct(_ sender: UIButton) {
@@ -129,11 +139,8 @@ class AddEditViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
- 
 
 }
-
-
 
 // MARK: - UIImagePickerControllerDelegate
 extension AddEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -144,19 +151,17 @@ extension AddEditViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
 }
 
-extension AddEditViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataSource[row]
-    }
-}
-
-extension AddEditViewController: UIPickerViewDataSource {
+extension AddEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataSource.count
+        return statesManager.states.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent: Int) -> String? {
+        let states = statesManager.states[row]
+        return states.name
     }
 }
-
-
