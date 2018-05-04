@@ -14,7 +14,7 @@
         <!--Lista de Compras-->
         <scene sceneID="kZj-IU-N0P">
             <objects>
-                <tableViewController id="bCj-2d-Zki" customClass="ProductTableViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bCj-2d-Zki" customClass="ProductsTableViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nik-iT-KIl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +237,7 @@
         <!--Cadastrar Produto-->
         <scene sceneID="9oW-mO-Fk7">
             <objects>
-                <viewController title="Cadastrar Produto" id="PFH-Qh-UU3" customClass="ProductRegisterViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Cadastrar Produto" id="PFH-Qh-UU3" customClass="AddEditViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nh6-bn-WAx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

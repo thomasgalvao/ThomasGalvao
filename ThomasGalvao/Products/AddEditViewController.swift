@@ -9,7 +9,7 @@
 import UIKit
 import CoreMotion
 
-class ProductRegisterViewController: UIViewController {
+class AddEditViewController: UIViewController {
     
     @IBOutlet weak var tfProductName: UITextField!
     @IBOutlet weak var ivProductImage: UIImageView!
@@ -20,7 +20,7 @@ class ProductRegisterViewController: UIViewController {
     
     var pickerView: UIPickerView!
     var dataSource:[String] = ["California", "New York", "Texas"]
-    var product: Product!
+    var product: Products!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +41,10 @@ class ProductRegisterViewController: UIViewController {
         
         if product != nil {
             tfProductName.text = product.title
-            if let image = product.poster as? UIImage {
+            if let image = product.cover as? UIImage {
                 ivProductImage.image = image
             }
-            tfProductPriceInDolar.text = String(product.dolar)
+            tfProductPriceInDolar.text = String(product.dollar)
             tfProductState.text = "Brasil"
             swProductCard.isOn = product.card
         }
@@ -103,26 +103,26 @@ class ProductRegisterViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //Adiciona Produtos no CoreData
     @IBAction func addUpdateProduct(_ sender: UIButton) {
         
         if product == nil {
-            product = Product(context: context)
+            product = Products(context: context)
         }
-        
         
         product.title = tfProductName.text!
-        
-        if let dolar = Double(tfProductPriceInDolar.text!) {
-            product.dolar = dolar
+        if let dollar = Double(tfProductPriceInDolar.text!) {
+            product.dollar = dollar
         }
-        //product.dolar = Double(tfProductPriceInDolar.text!)!
-        product.poster = ivProductImage.image
+        product.cover = ivProductImage.image
+        
         
         do {
             try context.save()
         } catch {
             print(error.localizedDescription)
         }
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -136,7 +136,7 @@ class ProductRegisterViewController: UIViewController {
 
 
 // MARK: - UIImagePickerControllerDelegate
-extension ProductRegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         ivProductImage.image = image
@@ -144,13 +144,13 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate, UINavi
     }
 }
 
-extension ProductRegisterViewController: UIPickerViewDelegate {
+extension AddEditViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
     }
 }
 
-extension ProductRegisterViewController: UIPickerViewDataSource {
+extension AddEditViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

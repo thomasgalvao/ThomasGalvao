@@ -13,7 +13,7 @@ import AVFoundation
 class AddEditTableViewController: UITableViewController {
     
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
-    var fetchedResultController: NSFetchedResultsController<Product>!
+    var fetchedResultController: NSFetchedResultsController<Products>!
     var backgroundMusicPlayer: AVAudioPlayer!
     
     
@@ -29,7 +29,7 @@ class AddEditTableViewController: UITableViewController {
     }
     
     func loadProduct() {
-        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        let fetchRequest: NSFetchRequest<Products> = Products.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)

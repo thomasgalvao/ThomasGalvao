@@ -10,9 +10,9 @@ import UIKit
 import CoreData
 import AVFoundation
 
-class ProductTableViewController: UITableViewController {
+class ProductsTableViewController: UITableViewController {
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
-    var fetchedResultController: NSFetchedResultsController<Product>!
+    var fetchedResultController: NSFetchedResultsController<Products>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +20,13 @@ class ProductTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         label.text = "Sua lista está vazia!"
         label.textAlignment = .center
-        //label.textColor = .white
         
         loadProducts()
     }
     
     //Indica que dever ordernar por titulo
     func loadProducts() {
-        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        let fetchRequest: NSFetchRequest<Products> = Products.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
@@ -63,9 +62,9 @@ class ProductTableViewController: UITableViewController {
         
         //Carrega o Nome do Produto e o Valor em Dolar
         cell.lbTitle.text = product.title
-        cell.lbDolar.text = String(product.dolar)
+        cell.lbDolar.text = String(product.dollar)
         //Carrega a Imagem
-        if let image = product.poster as? UIImage {
+        if let image = product.cover as? UIImage {
             cell.ivPoster.image = image
         } else {
             cell.ivPoster.image = nil
@@ -90,7 +89,7 @@ class ProductTableViewController: UITableViewController {
 }
 
 // MARK: - NSFetchedResultsControllerDelegate
-extension ProductTableViewController: NSFetchedResultsControllerDelegate {
+extension ProductsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.reloadData()
     }

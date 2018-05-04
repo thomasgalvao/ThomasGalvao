@@ -17,8 +17,8 @@ class StateViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSource: [State] = []
-    var product: Product!
+    var dataSource: [States] = []
+    var product: Products!
     
     override func viewDidLoad() {
         super.viewDidLoad()

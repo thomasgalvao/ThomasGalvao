@@ -25,11 +25,11 @@ class ProductTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepare(with product: Product) {
+    func prepare(with product: Products) {
         lbTitle.text = product.title ?? ""
-        lbDolar.text = String(product.dolar) 
+        lbDolar.text = String(product.dollar)
         
-        if let image = product.poster as? UIImage{
+        if let image = product.cover as? UIImage{
             ivPoster.image = image
         } else {
             ivPoster.image = UIImage(named: "product")
