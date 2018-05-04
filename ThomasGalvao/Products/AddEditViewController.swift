@@ -17,7 +17,7 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var tfProductPriceInDolar: UITextField!
     @IBOutlet weak var swProductCard: UISwitch!
     @IBOutlet weak var btProductAddEdit: UIButton!
-    @IBOutlet weak var btImage: UIButton!
+    //@IBOutlet weak var btImage: UIButton!
     
     var statesManager = StatesManager.shared
     var product: Products!
@@ -55,9 +55,14 @@ class AddEditViewController: UIViewController {
             
             if let state = product.states, let index = statesManager.states.index(of: state) {
                 tfProductState.text = state.name
-                pickerView.selectRow(index, inComponent: 0, animated: false)
+                pickerView.selectRow(index, inComponent: 0, animated: true)
             }
-            swProductCard.isOn = product.card
+            
+            if swProductCard.isOn {
+                swProductCard.setOn(true, animated: true)
+            } else {
+                swProductCard.setOn(false, animated: true)
+            }
         }
     }
    

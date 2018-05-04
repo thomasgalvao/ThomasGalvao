@@ -15,7 +15,6 @@
 		C601BCF0209CD1EA008BB9B6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCEF209CD1EA008BB9B6 /* PreviewViewController.swift */; };
 		C601BCF2209CDE8A008BB9B6 /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601BCF1209CDE8A008BB9B6 /* StatesTableViewCell.swift */; };
 		C6999DDD20881C4B00B90C3D /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDC20881C4B00B90C3D /* AddEditViewController.swift */; };
-		C6999DDF20881CE200B90C3D /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */; };
 		C6999DE1208E8F6B00B90C3D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6999DE0208E8F6B00B90C3D /* Settings.bundle */; };
 		C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB048220880E540029D2B4 /* AppDelegate.swift */; };
 		C6CB048820880E540029D2B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CB048620880E540029D2B4 /* Main.storyboard */; };
@@ -35,7 +34,6 @@
 		C601BCEF209CD1EA008BB9B6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		C601BCF1209CDE8A008BB9B6 /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatesTableViewCell.swift; path = States/StatesTableViewCell.swift; sourceTree = "<group>"; };
 		C6999DDC20881C4B00B90C3D /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
-		C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
 		C6999DE0208E8F6B00B90C3D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C6CB047F20880E540029D2B4 /* ThomasGalvao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThomasGalvao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CB048220880E540029D2B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 				C601BCE9209CA76D008BB9B6 /* StatesViewController.swift */,
 				C601BCEB209CAF13008BB9B6 /* Configuration.swift */,
 				C601BCF1209CDE8A008BB9B6 /* StatesTableViewCell.swift */,
+				C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -106,7 +105,6 @@
 			children = (
 				C6CB048620880E540029D2B4 /* Main.storyboard */,
 				C6CB048E20880E540029D2B4 /* LaunchScreen.storyboard */,
-				C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */,
 				C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */,
 				C6CB049120880E540029D2B4 /* Info.plist */,
 				C601BCED209CCABE008BB9B6 /* Assets.xcassets */,
@@ -116,7 +114,6 @@
 				C6DAAA6620912A5400163072 /* Extensions */,
 				C6999DD9208812A800B90C3D /* Delegate */,
 				C6999DD82088128100B90C3D /* ViewController */,
-				C6999DDE20881CE200B90C3D /* AddEditTableViewController.swift */,
 			);
 			path = ThomasGalvao;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				C6CB048320880E540029D2B4 /* AppDelegate.swift in Sources */,
 				C6DAAA6820912A7D00163072 /* UIViewControler+CoreData.swift in Sources */,
 				C6DAAA6A2091357100163072 /* ProductsTableViewController.swift in Sources */,
-				C6999DDF20881CE200B90C3D /* AddEditTableViewController.swift in Sources */,
 				C601BCE8209C9B06008BB9B6 /* TotalPurchasesViewController.swift in Sources */,
 				C601BCEC209CAF13008BB9B6 /* Configuration.swift in Sources */,
 				C601BCF0209CD1EA008BB9B6 /* PreviewViewController.swift in Sources */,

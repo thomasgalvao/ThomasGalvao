@@ -33,6 +33,8 @@ class ProductTableViewCell: UITableViewCell {
         } else {
             ivCover.image = UIImage(named: "cover")
         }
+        self.ivCover.layer.cornerRadius = self.ivCover.frame.size.width / 2
+        self.ivCover.clipsToBounds = true
     }
 
 }

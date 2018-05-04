@@ -15,6 +15,7 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var ivCover: UIImageView!
     @IBOutlet weak var lbState: UILabel!
     @IBOutlet weak var lbDollar: UILabel!
+    @IBOutlet weak var lbCardYesNo: UILabel!
     
     var product: Products!
     
@@ -36,12 +37,16 @@ class PreviewViewController: UIViewController {
             ivCover.image = UIImage(named: "cover")
         }
         
-        if let state = lbState.text {
-            product.states?.name = state
-        }
+        lbState.text = product.states?.name
         
         let dollar = String(product.dollar)
         lbDollar.text = "US$ \(dollar)"
+        
+        if product.card {
+            lbCardYesNo.text = "Sim"
+        } else {
+            lbCardYesNo.text = "Não"
+        }
     }
 
     override func didReceiveMemoryWarning() {
