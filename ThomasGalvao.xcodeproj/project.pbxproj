@@ -21,23 +21,6 @@
 		C6DAAA6E20913B4C00163072 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C6CB049720880E540029D2B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6CB047720880E530029D2B4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6CB047E20880E540029D2B4;
-			remoteInfo = ThomasGalvao;
-		};
-		C6CB04A220880E550029D2B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6CB047720880E530029D2B4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6CB047E20880E540029D2B4;
-			remoteInfo = ThomasGalvao;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		C61F7C47209966C100084A4A /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		C6999DDC20881C4B00B90C3D /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
@@ -50,8 +33,6 @@
 		C6CB048C20880E540029D2B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6CB048F20880E540029D2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6CB049120880E540029D2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6CB049620880E540029D2B4 /* ThomasGalvaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThomasGalvaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6CB04A120880E550029D2B4 /* ThomasGalvaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThomasGalvaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DAAA6720912A7D00163072 /* UIViewControler+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControler+CoreData.swift"; sourceTree = "<group>"; };
 		C6DAAA692091357100163072 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -65,29 +46,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6CB049320880E540029D2B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6CB049E20880E550029D2B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C61F7C462099669C00084A4A /* New Group */ = {
+		C61F7C462099669C00084A4A /* States */ = {
 			isa = PBXGroup;
 			children = (
 				C61F7C47209966C100084A4A /* StateViewController.swift */,
 			);
-			name = "New Group";
+			name = States;
 			sourceTree = "<group>";
 		};
 		C6999DD82088128100B90C3D /* ViewController */ = {
@@ -117,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				C6CB047F20880E540029D2B4 /* ThomasGalvao.app */,
-				C6CB049620880E540029D2B4 /* ThomasGalvaoTests.xctest */,
-				C6CB04A120880E550029D2B4 /* ThomasGalvaoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,8 +97,8 @@
 				C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */,
 				C6CB049120880E540029D2B4 /* Info.plist */,
 				C6999DE0208E8F6B00B90C3D /* Settings.bundle */,
-				C6DAAA6F2091430400163072 /* Product */,
-				C61F7C462099669C00084A4A /* New Group */,
+				C6DAAA6F2091430400163072 /* Products */,
+				C61F7C462099669C00084A4A /* States */,
 				C6DAAA6620912A5400163072 /* Extensions */,
 				C6999DD9208812A800B90C3D /* Delegate */,
 				C6999DD82088128100B90C3D /* ViewController */,
@@ -150,14 +115,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C6DAAA6F2091430400163072 /* Product */ = {
+		C6DAAA6F2091430400163072 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				C6DAAA692091357100163072 /* ProductTableViewController.swift */,
 				C6DAAA6D20913B4C00163072 /* ProductTableViewCell.swift */,
 				C6999DDC20881C4B00B90C3D /* ProductRegisterViewController.swift */,
 			);
-			path = Product;
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,42 +145,6 @@
 			productReference = C6CB047F20880E540029D2B4 /* ThomasGalvao.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C6CB049520880E540029D2B4 /* ThomasGalvaoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6CB04AD20880E550029D2B4 /* Build configuration list for PBXNativeTarget "ThomasGalvaoTests" */;
-			buildPhases = (
-				C6CB049220880E540029D2B4 /* Sources */,
-				C6CB049320880E540029D2B4 /* Frameworks */,
-				C6CB049420880E540029D2B4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6CB049820880E540029D2B4 /* PBXTargetDependency */,
-			);
-			name = ThomasGalvaoTests;
-			productName = ThomasGalvaoTests;
-			productReference = C6CB049620880E540029D2B4 /* ThomasGalvaoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C6CB04A020880E550029D2B4 /* ThomasGalvaoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6CB04B020880E550029D2B4 /* Build configuration list for PBXNativeTarget "ThomasGalvaoUITests" */;
-			buildPhases = (
-				C6CB049D20880E550029D2B4 /* Sources */,
-				C6CB049E20880E550029D2B4 /* Frameworks */,
-				C6CB049F20880E550029D2B4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6CB04A320880E550029D2B4 /* PBXTargetDependency */,
-			);
-			name = ThomasGalvaoUITests;
-			productName = ThomasGalvaoUITests;
-			productReference = C6CB04A120880E550029D2B4 /* ThomasGalvaoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,14 +157,6 @@
 				TargetAttributes = {
 					C6CB047E20880E540029D2B4 = {
 						CreatedOnToolsVersion = 9.3;
-					};
-					C6CB049520880E540029D2B4 = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = C6CB047E20880E540029D2B4;
-					};
-					C6CB04A020880E550029D2B4 = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = C6CB047E20880E540029D2B4;
 					};
 				};
 			};
@@ -253,8 +174,6 @@
 			projectRoot = "";
 			targets = (
 				C6CB047E20880E540029D2B4 /* ThomasGalvao */,
-				C6CB049520880E540029D2B4 /* ThomasGalvaoTests */,
-				C6CB04A020880E550029D2B4 /* ThomasGalvaoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,20 +187,6 @@
 				C6CB049020880E540029D2B4 /* LaunchScreen.storyboard in Resources */,
 				C6CB048D20880E540029D2B4 /* Assets.xcassets in Resources */,
 				C6CB048820880E540029D2B4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6CB049420880E540029D2B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6CB049F20880E550029D2B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,34 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6CB049220880E540029D2B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6CB049D20880E550029D2B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C6CB049820880E540029D2B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6CB047E20880E540029D2B4 /* ThomasGalvao */;
-			targetProxy = C6CB049720880E540029D2B4 /* PBXContainerItemProxy */;
-		};
-		C6CB04A320880E550029D2B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6CB047E20880E540029D2B4 /* ThomasGalvao */;
-			targetProxy = C6CB04A220880E550029D2B4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C6CB048620880E540029D2B4 /* Main.storyboard */ = {
@@ -502,88 +380,6 @@
 			};
 			name = Release;
 		};
-		C6CB04AE20880E550029D2B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HT8E7PD9B;
-				INFOPLIST_FILE = ThomasGalvaoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.thomasgalvao.ThomasGalvaoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThomasGalvao.app/ThomasGalvao";
-			};
-			name = Debug;
-		};
-		C6CB04AF20880E550029D2B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HT8E7PD9B;
-				INFOPLIST_FILE = ThomasGalvaoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.thomasgalvao.ThomasGalvaoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThomasGalvao.app/ThomasGalvao";
-			};
-			name = Release;
-		};
-		C6CB04B120880E550029D2B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HT8E7PD9B;
-				INFOPLIST_FILE = ThomasGalvaoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.thomasgalvao.ThomasGalvaoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ThomasGalvao;
-			};
-			name = Debug;
-		};
-		C6CB04B220880E550029D2B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HT8E7PD9B;
-				INFOPLIST_FILE = ThomasGalvaoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.thomasgalvao.ThomasGalvaoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ThomasGalvao;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -601,24 +397,6 @@
 			buildConfigurations = (
 				C6CB04AB20880E550029D2B4 /* Debug */,
 				C6CB04AC20880E550029D2B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6CB04AD20880E550029D2B4 /* Build configuration list for PBXNativeTarget "ThomasGalvaoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6CB04AE20880E550029D2B4 /* Debug */,
-				C6CB04AF20880E550029D2B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6CB04B020880E550029D2B4 /* Build configuration list for PBXNativeTarget "ThomasGalvaoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6CB04B120880E550029D2B4 /* Debug */,
-				C6CB04B220880E550029D2B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
