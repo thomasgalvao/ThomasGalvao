@@ -15,15 +15,14 @@ class StatesViewController: UIViewController {
     var label = UILabel()
     var formatter = NumberFormatter()
     let config = Configuration.shared
-    var state: States!
-    var fetchedResultController: NSFetchedResultsController<States>!
+    var state: State!
+    var fetchedResultController: NSFetchedResultsController<State>!
     @IBOutlet weak var tfDollar: UITextField!
     @IBOutlet weak var tfIof: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +37,7 @@ class StatesViewController: UIViewController {
     }
    
     
-    func showAlert(with state: States? ) {
+    func showAlert(with state: State? ) {
         
         let title = state == nil ? "Add " : "Edit "
         let alert = UIAlertController(title: title + "State", message: nil, preferredStyle: .alert )
@@ -59,7 +58,7 @@ class StatesViewController: UIViewController {
         }
         
         alert.addAction(UIAlertAction(title: title, style: .default, handler: {
-            (action) in let state = state ?? States(context: self.context)
+            (action) in let state = state ?? State(context: self.context)
             state.name = alert.textFields?.first?.text
             
             guard let tax = self.formatter.number(from: (alert.textFields?[1].text!)!)?.doubleValue else { return }
@@ -121,7 +120,7 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSF
             tableView.backgroundView = label
             return 0
         } else {
-            
+            label.text = ""
             return statesManager.states.count
         }
     }

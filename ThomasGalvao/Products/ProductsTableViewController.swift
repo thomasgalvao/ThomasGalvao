@@ -12,8 +12,9 @@ import AVFoundation
 
 class ProductsTableViewController: UITableViewController {
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
-    var fetchedResultController: NSFetchedResultsController<Products>!
+    var fetchedResultController: NSFetchedResultsController<Product>!
     let searchController = UISearchController(searchResultsController: nil)
+    var format = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class ProductsTableViewController: UITableViewController {
     }
     //
     func loadProducts(filtering: String = "") {
-        let fetchRequest: NSFetchRequest<Products> = Products.fetchRequest()
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         

@@ -19,7 +19,7 @@ class TotalPurchasesViewController: UIViewController {
     
     let config = Configuration.shared
     
-    var dataSource: [Products] = []
+    var dataSource: [Product] = []
     var format = NumberFormatter()
     
     override func viewDidLoad() {
@@ -33,11 +33,11 @@ class TotalPurchasesViewController: UIViewController {
         let iof = UserDefaults.standard.string(forKey: "iof")
         
         var results = 0.0
-        dataSource.forEach { (products) in
-            if let state = products.states {
-                var result = products.dollar + calculateStateTax(value: products.dollar, tax: state.tax)
+        dataSource.forEach { (product) in
+            if let state = product.state {
+                var result = product.dollar + calculateStateTax(value: product.dollar, tax: state.tax)
                 
-                if products.card {
+                if product.card {
                     result = result + calculateIOFValue(value: (result), iof: Double(iof!)!)
                 }
                 results += result
@@ -65,7 +65,7 @@ class TotalPurchasesViewController: UIViewController {
     }
  
     func loadProducts() {
-        let fetchRequest: NSFetchRequest<Products> = Products.fetchRequest()
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         do {

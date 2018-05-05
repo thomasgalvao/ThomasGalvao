@@ -24,8 +24,8 @@ class StatesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepare(with product: Products) {
-        lbState.text = product.states?.name ?? ""
-        lbTax.text = "U$ \(String(describing: product.states?.tax))"
+    func prepare(with product: Product) {
+        lbState.text = product.state?.name ?? ""
+        lbTax.text = "U$ \(String(describing: product.state?.tax))"
     }
 }

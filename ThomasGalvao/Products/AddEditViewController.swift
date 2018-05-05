@@ -19,7 +19,8 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var btProductAddEdit: UIButton!
     
     var statesManager = StatesManager.shared
-    var product: Products!
+    var product: Product!
+    var format = NumberFormatter()
     
     lazy var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -50,9 +51,9 @@ class AddEditViewController: UIViewController {
             
             tfProductName.text = product.title
 
-            tfProductPriceInDolar.text = String(product.dollar)
+            tfProductPriceInDolar.text = String(format: "%.2f", product.dollar)
             
-            if let state = product.states, let index = statesManager.states.index(of: state) {
+            if let state = product.state, let index = statesManager.states.index(of: state) {
                 tfProductState.text = state.name
                 pickerView.selectRow(index, inComponent: 0, animated: true)
             }
@@ -120,7 +121,7 @@ class AddEditViewController: UIViewController {
     @IBAction func addUpdateProduct(_ sender: UIButton) {
         
         if product == nil {
-            product = Products(context: context)
+            product = Product(context: context)
         }
         
         product.title = tfProductName.text!
@@ -128,7 +129,7 @@ class AddEditViewController: UIViewController {
             product.dollar = dollar
         }
         product.cover = ivProductImage.image
-        product.states = statesManager.states.filter({$0.name == tfProductState.text!}).first
+        product.state = statesManager.states.filter({$0.name == tfProductState.text!}).first
         product.card = swProductCard.isOn
         
         do {
