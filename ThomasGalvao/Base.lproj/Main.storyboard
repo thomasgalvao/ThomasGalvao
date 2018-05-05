@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="8kW-Vl-zxM">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="8kW-Vl-zxM">
                             <rect key="frame" x="0.0" y="118" width="414" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -389,6 +389,7 @@
                         <viewLayoutGuide key="safeArea" id="Q62-OF-MEt"/>
                     </view>
                     <connections>
+                        <outlet property="btLabel" destination="u5l-UI-hOZ" id="hic-v2-0zO"/>
                         <outlet property="btProductAddEdit" destination="u5l-UI-hOZ" id="nG5-iG-OsQ"/>
                         <outlet property="ivProductImage" destination="LYW-ig-7zL" id="8fp-t3-aDy"/>
                         <outlet property="swProductCard" destination="Bvr-VG-B29" id="cga-l3-K8a"/>

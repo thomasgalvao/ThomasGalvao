@@ -17,6 +17,7 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var tfProductPriceInDolar: UITextField!
     @IBOutlet weak var swProductCard: UISwitch!
     @IBOutlet weak var btProductAddEdit: UIButton!
+    @IBOutlet weak var btLabel: UIButton!
     
     var statesManager = StatesManager.shared
     var product: Product!
@@ -32,6 +33,10 @@ class AddEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btLabel.layer.cornerRadius = 3
+        btLabel.layer.borderWidth = 1
+        btLabel.layer.borderColor = UIColor.black.cgColor
         
         statesManager.loadStates(with: context)
         

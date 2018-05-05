@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		C601BCDF209C2397008BB9B6 /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
-		C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TotalPurchasesViewController.swift; path = ../TotalPurchasesViewController.swift; sourceTree = "<group>"; };
+		C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPurchasesViewController.swift; sourceTree = "<group>"; };
 		C601BCEB209CAF13008BB9B6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		C601BCED209CCABE008BB9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6999DDC20881C4B00B90C3D /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
@@ -57,18 +57,17 @@
 			isa = PBXGroup;
 			children = (
 				C601BCDF209C2397008BB9B6 /* StatesManager.swift */,
-				C601BCEB209CAF13008BB9B6 /* Configuration.swift */,
-				C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */,
 				C6A14994209DE1CF00A6185A /* StatesViewController.swift */,
 			);
 			name = States;
 			sourceTree = "<group>";
 		};
-		C6999DD82088128100B90C3D /* ViewController */ = {
+		C6999DD82088128100B90C3D /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				C601BCEB209CAF13008BB9B6 /* Configuration.swift */,
 			);
-			path = ViewController;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		C6999DD9208812A800B90C3D /* Delegate */ = {
@@ -77,6 +76,14 @@
 				C6CB048220880E540029D2B4 /* AppDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		C6A6BE9A209E3C9900D01AC7 /* Total */ = {
+			isa = PBXGroup;
+			children = (
+				C601BCE7209C9B06008BB9B6 /* TotalPurchasesViewController.swift */,
+			);
+			path = Total;
 			sourceTree = "<group>";
 		};
 		C6CB047620880E530029D2B4 = {
@@ -99,16 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				C6CB048620880E540029D2B4 /* Main.storyboard */,
+				C6DAAA6F2091430400163072 /* Products */,
+				C6999DE0208E8F6B00B90C3D /* Settings.bundle */,
+				C6A6BE9A209E3C9900D01AC7 /* Total */,
+				C6DAAA6620912A5400163072 /* Extensions */,
+				C6999DD82088128100B90C3D /* Configuration */,
+				C6999DD9208812A800B90C3D /* Delegate */,
 				C6CB048E20880E540029D2B4 /* LaunchScreen.storyboard */,
 				C6CB048920880E540029D2B4 /* ThomasGalvao.xcdatamodeld */,
 				C6CB049120880E540029D2B4 /* Info.plist */,
 				C601BCED209CCABE008BB9B6 /* Assets.xcassets */,
-				C6999DE0208E8F6B00B90C3D /* Settings.bundle */,
-				C6DAAA6F2091430400163072 /* Products */,
 				C61F7C462099669C00084A4A /* States */,
-				C6DAAA6620912A5400163072 /* Extensions */,
-				C6999DD9208812A800B90C3D /* Delegate */,
-				C6999DD82088128100B90C3D /* ViewController */,
 			);
 			path = ThomasGalvao;
 			sourceTree = "<group>";
