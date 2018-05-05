@@ -39,18 +39,18 @@ class StatesViewController: UIViewController {
     
     func showAlert(with state: State? ) {
         
-        let title = state == nil ? "Add " : "Edit "
-        let alert = UIAlertController(title: title + "State", message: nil, preferredStyle: .alert )
+        let title = state == nil ? "Adicionar " : "Adicionar "
+        let alert = UIAlertController(title: title + "Estado", message: nil, preferredStyle: .alert )
         
         alert.addTextField {
-            (textField) in textField.placeholder = "Name Of State"
+            (textField) in textField.placeholder = "Nome do Estado"
             if let name = state?.name {
                 textField.text = name
             }
         }
         
         alert.addTextField { (textField) in
-            textField.placeholder = "Tax"
+            textField.placeholder = "Imposto"
             textField.keyboardType = .decimalPad
             if let tax = state?.tax {
                 textField.text = String(tax)
