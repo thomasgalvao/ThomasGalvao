@@ -35,6 +35,7 @@ class StatesViewController: UIViewController {
         showAlert(with: nil)
         loadStates()
     }
+   
     
     func showAlert(with state: States? ) {
         
@@ -147,5 +148,11 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSF
             }
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let state = statesManager.states[indexPath.row]
+        showAlert(with: state)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
