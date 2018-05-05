@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="8kW-Vl-zxM">
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="8kW-Vl-zxM">
                             <rect key="frame" x="0.0" y="118" width="414" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,7 +139,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="changeDolarQuotation:" destination="NXK-hi-jBQ" eventType="editingChanged" id="lbC-AK-kZa"/>
                                 </connections>
@@ -153,7 +153,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellState" textLabel="j0a-6k-hx9" detailTextLabel="1V1-qi-ieT" rowHeight="50" style="IBUITableViewCellStyleValue1" id="QEb-te-FH0" customClass="StatesTableViewCell" customModule="ThomasGalvao" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellState" textLabel="j0a-6k-hx9" detailTextLabel="1V1-qi-ieT" rowHeight="50" style="IBUITableViewCellStyleValue1" id="QEb-te-FH0" customClass="StatesTableViewCell" customModule="ThomasGalvao" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QEb-te-FH0" id="cgb-bv-vD5">
@@ -235,7 +235,7 @@
         <!--Total da Compra-->
         <scene sceneID="pmM-vM-DO8">
             <objects>
-                <viewController id="HfT-d0-1bO" sceneMemberID="viewController">
+                <viewController id="HfT-d0-1bO" customClass="TotalPurchasesViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7cZ-Hd-vvu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,6 +274,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="tax" id="qST-fl-i7T"/>
                     <navigationItem key="navigationItem" id="le8-a6-xkM"/>
+                    <connections>
+                        <outlet property="lbTotalDollar" destination="s7a-B2-dyk" id="u4h-vJ-Svu"/>
+                        <outlet property="lbTotalReal" destination="94X-sj-gRP" id="Gdw-Xy-64O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a3-PY-jie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,11 +339,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-UI-hOZ">
-                                <rect key="frame" x="16" y="473" width="382" height="30"/>
+                                <rect key="frame" x="16" y="473" width="382" height="50"/>
                                 <color key="backgroundColor" red="0.2307461528061735" green="0.60721270574768726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2UP-g7-em6"/>
+                                    <constraint firstAttribute="height" constant="50" id="3DE-pa-Gjq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.99020309625011327" blue="0.98015760943580321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Cadatrar"/>
+                                <state key="normal" title="Cadastrar"/>
                                 <connections>
                                     <action selector="addUpdateProduct:" destination="PFH-Qh-UU3" eventType="touchUpInside" id="gzP-cF-qYw"/>
                                 </connections>
@@ -365,6 +373,7 @@
                             <constraint firstItem="Q62-OF-MEt" firstAttribute="trailing" secondItem="bsB-Y4-CW9" secondAttribute="trailing" constant="150" id="dOX-C2-1pc"/>
                             <constraint firstItem="oz6-2A-vRU" firstAttribute="top" secondItem="LYW-ig-7zL" secondAttribute="bottom" constant="20" id="eXM-pb-R2Q"/>
                             <constraint firstItem="NOn-n2-qQq" firstAttribute="leading" secondItem="Q62-OF-MEt" secondAttribute="leading" constant="16" id="htv-BQ-ZzF"/>
+                            <constraint firstItem="Q62-OF-MEt" firstAttribute="bottom" secondItem="u5l-UI-hOZ" secondAttribute="bottom" constant="164" id="jjA-Va-19x"/>
                             <constraint firstItem="u5l-UI-hOZ" firstAttribute="top" secondItem="Bvr-VG-B29" secondAttribute="bottom" constant="16" id="kiC-Hf-CBc"/>
                             <constraint firstItem="GR4-al-xPy" firstAttribute="leading" secondItem="bsB-Y4-CW9" secondAttribute="trailing" constant="15" id="mPV-1q-DgG"/>
                             <constraint firstItem="Bvr-VG-B29" firstAttribute="top" secondItem="6VF-g3-ZI9" secondAttribute="bottom" constant="16" id="ngN-sQ-nny"/>
@@ -372,7 +381,6 @@
                             <constraint firstItem="6VF-g3-ZI9" firstAttribute="top" secondItem="LYW-ig-7zL" secondAttribute="bottom" constant="20" id="q3G-1E-Aqe"/>
                             <constraint firstItem="Bvr-VG-B29" firstAttribute="leading" secondItem="GR4-al-xPy" secondAttribute="trailing" constant="10" id="qFF-Gr-0GH"/>
                             <constraint firstItem="Q62-OF-MEt" firstAttribute="trailing" secondItem="Bvr-VG-B29" secondAttribute="trailing" constant="16" id="sqv-4g-kjv"/>
-                            <constraint firstItem="Q62-OF-MEt" firstAttribute="bottom" secondItem="u5l-UI-hOZ" secondAttribute="bottom" constant="184" id="uIR-4J-c1s"/>
                             <constraint firstItem="oz6-2A-vRU" firstAttribute="leading" secondItem="6VF-g3-ZI9" secondAttribute="trailing" constant="22" id="uUQ-To-bbc"/>
                             <constraint firstItem="GR4-al-xPy" firstAttribute="top" secondItem="Bvr-VG-B29" secondAttribute="top" id="up3-1m-Joj"/>
                             <constraint firstItem="6VF-g3-ZI9" firstAttribute="leading" secondItem="Q62-OF-MEt" secondAttribute="leading" constant="16" id="yNG-Cd-19D"/>
@@ -391,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDA-2d-kGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1745" y="1520"/>
+            <point key="canvasLocation" x="-2220.289855072464" y="1506.521739130435"/>
         </scene>
         <!--Cadastrar Produto-->
         <scene sceneID="k2X-oW-8Mx">

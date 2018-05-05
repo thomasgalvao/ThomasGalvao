@@ -23,6 +23,7 @@ class StatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -155,4 +156,6 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSF
         showAlert(with: state)
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    
+    
 }
