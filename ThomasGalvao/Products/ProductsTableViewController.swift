@@ -97,7 +97,7 @@ class ProductsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "viewSegue" {
-            let vc = segue.destination as! PreviewViewController
+            let vc = segue.destination as! AddEditViewController
             if let product = fetchedResultController.fetchedObjects {
                 vc.product = product[tableView.indexPathForSelectedRow!.row]
             }

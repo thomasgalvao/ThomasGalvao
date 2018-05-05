@@ -13,7 +13,7 @@
         <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="states" inverseEntity="Products" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Products" positionX="106" positionY="-1485" width="128" height="120"/>
+        <element name="Products" positionX="106" positionY="-1485" width="128" height="30"/>
         <element name="States" positionX="117" positionY="-1449" width="128" height="90"/>
     </elements>
 </model>
