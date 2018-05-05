@@ -29,10 +29,11 @@ class TotalPurchasesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadProducts()
-        let dolar = UserDefaults.standard.string(forKey: "dollar")
+        let dollar = UserDefaults.standard.string(forKey: "dollar") 
         let iof = UserDefaults.standard.string(forKey: "iof")
         
         var results = 0.0
+        var sumDollar = 0.0
         dataSource.forEach { (product) in
             if let state = product.state {
                 var result = product.dollar + calculateStateTax(value: product.dollar, tax: state.tax)
@@ -40,15 +41,16 @@ class TotalPurchasesViewController: UIViewController {
                 if product.card {
                     result = result + calculateIOFValue(value: (result), iof: Double(iof!)!)
                 }
+                sumDollar += product.dollar
                 results += result
             }
         }
         
-        totalDollar = results * Double(dolar!)!
-        totalReal = results
+        totalDollar = sumDollar
+        totalReal = results * Double(dollar!)!
         
-        lbTotalReal.text = String(format: "%.2f", totalDollar)
-        lbTotalDollar.text = String(format: "%.2f", totalReal)
+        lbTotalReal.text = String(format: "%.2f", totalReal)
+        lbTotalDollar.text = String(format: "%.2f", totalDollar)
     }
     
     func calculateStateTax(value: Double, tax: Double) -> Double {
@@ -61,7 +63,6 @@ class TotalPurchasesViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
  
     func loadProducts() {
@@ -74,15 +75,4 @@ class TotalPurchasesViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

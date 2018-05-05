@@ -73,13 +73,13 @@ class StatesViewController: UIViewController {
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.view.tintColor = UIColor(named: "second")
+        //alert.view.tintColor = UIColor(named: "second")
         present(alert, animated: true, completion: nil)
         
     }
     
     func formartView() {
-        tfDollar.text = UserDefaults.standard.string(forKey: "dollar")
+        tfDollar.text = UserDefaults.standard.string(forKey: "dollar") //TODO
         tfIof.text = UserDefaults.standard.string(forKey: "iof")
     }
     
@@ -130,7 +130,7 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSF
         
         state = statesManager.states[indexPath.row]
         cell.textLabel?.text = state.name
-        cell.detailTextLabel?.text = "\(state.tax)"
+        cell.detailTextLabel?.text = String(format: "%.1f", state.tax)
         return cell
     }
     
