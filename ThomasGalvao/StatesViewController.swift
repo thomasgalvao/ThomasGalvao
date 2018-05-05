@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StatesViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class StatesViewController: UIViewController {
     var formatter = NumberFormatter()
     let config = Configuration.shared
     var state: States!
-    
+    var fetchedResultController: NSFetchedResultsController<States>!
     @IBOutlet weak var tfDollar: UITextField!
     @IBOutlet weak var tfIof: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -34,7 +35,6 @@ class StatesViewController: UIViewController {
         showAlert(with: nil)
         loadStates()
     }
-    
     
     func showAlert(with state: States? ) {
         
@@ -95,8 +95,7 @@ class StatesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
     @IBAction func changeDolarQuotation(_ sender: UITextField) {
         UserDefaults.standard.set(tfDollar.text, forKey: "dollar")
     }
@@ -104,9 +103,11 @@ class StatesViewController: UIViewController {
     @IBAction func changeIOFQuotation(_ sender: UITextField) {
         UserDefaults.standard.set(tfIof.text, forKey: "iof")
     }
+    
+   
 }
 
-extension StatesViewController : UITableViewDataSource, UITableViewDelegate {
+extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -130,5 +131,21 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = state.name
         cell.detailTextLabel?.text = "\(state.tax)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
+                            forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            statesManager.deleteState(index: indexPath.row, context: context)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            do {
+                try self.context.save()
+                self.loadStates()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
     }
 }

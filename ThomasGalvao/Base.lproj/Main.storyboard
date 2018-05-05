@@ -147,6 +147,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wzz-gY-5M1">
                                 <rect key="frame" x="20" y="225" width="374" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ea0-9I-ylX">
+                                    <rect key="frame" x="0.0" y="78" width="374" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellState" textLabel="j0a-6k-hx9" detailTextLabel="1V1-qi-ieT" rowHeight="50" style="IBUITableViewCellStyleValue1" id="QEb-te-FH0" customClass="StatesTableViewCell" customModule="ThomasGalvao" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="50"/>
@@ -171,10 +176,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="lbState" destination="j0a-6k-hx9" id="fZc-O2-ZmD"/>
-                                            <outlet property="lbTax" destination="1V1-qi-ieT" id="EPe-No-WV0"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

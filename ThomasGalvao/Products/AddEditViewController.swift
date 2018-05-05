@@ -67,7 +67,6 @@ class AddEditViewController: UIViewController {
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        tfProductState.text = UserDefaults.standard.string(forKey: "state")
     }
     
     @objc func cancel() {
