@@ -17,7 +17,6 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var tfProductPriceInDolar: UITextField!
     @IBOutlet weak var swProductCard: UISwitch!
     @IBOutlet weak var btProductAddEdit: UIButton!
-    //@IBOutlet weak var btImage: UIButton!
     
     var statesManager = StatesManager.shared
     var product: Products!
@@ -32,6 +31,8 @@ class AddEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        statesManager.loadStates(with: context)
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
         let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -48,9 +49,7 @@ class AddEditViewController: UIViewController {
             btProductAddEdit.setTitle("Editar", for: .normal)
             
             tfProductName.text = product.title
-            if let image = product.cover as? UIImage {
-                ivProductImage.image = image
-             }
+
             tfProductPriceInDolar.text = String(product.dollar)
             
             if let state = product.states, let index = statesManager.states.index(of: state) {
@@ -58,10 +57,8 @@ class AddEditViewController: UIViewController {
                 pickerView.selectRow(index, inComponent: 0, animated: true)
             }
             
-            if swProductCard.isOn {
-                swProductCard.setOn(true, animated: true)
-            } else {
-                swProductCard.setOn(false, animated: true)
+            if let image = product.cover as? UIImage {
+                ivProductImage.image = image
             }
         }
     }

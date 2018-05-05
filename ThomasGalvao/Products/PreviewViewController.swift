@@ -42,11 +42,8 @@ class PreviewViewController: UIViewController {
         let dollar = String(product.dollar)
         lbDollar.text = "US$ \(dollar)"
         
-        if product.card {
-            lbCardYesNo.text = "Sim"
-        } else {
-            lbCardYesNo.text = "Não"
-        }
+        //lbCardYesNo.text = product.card
+      
     }
 
     override func didReceiveMemoryWarning() {
