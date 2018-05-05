@@ -60,12 +60,14 @@ class AddEditViewController: UIViewController {
             if let image = product.cover as? UIImage {
                 ivProductImage.image = image
             }
+            
+            swProductCard.isOn = product.card
         }
     }
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tfProductState.text = UserDefaults.standard.string(forKey: "state")
+//        tfProductState.text = UserDefaults.standard.string(forKey: "state")
     }
     
     @objc func cancel() {
@@ -127,7 +129,8 @@ class AddEditViewController: UIViewController {
             product.dollar = dollar
         }
         product.cover = ivProductImage.image
-        
+        product.states = statesManager.states.filter({$0.name == tfProductState.text!}).first
+        product.card = swProductCard.isOn
         
         do {
             try context.save()

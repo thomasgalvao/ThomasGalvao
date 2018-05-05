@@ -42,7 +42,7 @@ class PreviewViewController: UIViewController {
         let dollar = String(product.dollar)
         lbDollar.text = "US$ \(dollar)"
         
-        //lbCardYesNo.text = product.card
+        lbCardYesNo.text = product.card == true ? "Sim" : "Não"
       
     }
 

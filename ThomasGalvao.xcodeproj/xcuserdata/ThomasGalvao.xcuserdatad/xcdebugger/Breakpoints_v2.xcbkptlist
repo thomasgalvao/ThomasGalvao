@@ -186,13 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThomasGalvao/StatesViewController.swift"
-            timestampString = "547171221.49146"
+            timestampString = "547219443.157626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "formartView()"
-            landmarkType = "7">
+            startingLineNumber = "135"
+            endingLineNumber = "135">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -202,13 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThomasGalvao/StatesViewController.swift"
-            timestampString = "547171221.491539"
+            timestampString = "547219443.1587729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "formartView()"
-            landmarkType = "7">
+            startingLineNumber = "135"
+            endingLineNumber = "135">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,13 +214,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThomasGalvao/Products/PreviewViewController.swift"
-            timestampString = "547174681.446328"
+            timestampString = "547219443.159812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
             endingLineNumber = "5"
             landmarkName = "unknown"
             landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/StatesViewController.swift"
+            timestampString = "547219443.159897"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

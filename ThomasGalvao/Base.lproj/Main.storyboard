@@ -89,35 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3US-6T-3gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900" y="605"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="9v9-Eh-84D">
-            <objects>
-                <tableViewController id="0M0-FV-1dZ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4lw-Hd-4ml">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WMd-oH-xHc">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WMd-oH-xHc" id="XYP-vl-Ztp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0M0-FV-1dZ" id="mFV-c4-8Ee"/>
-                            <outlet property="delegate" destination="0M0-FV-1dZ" id="qZg-V2-zS9"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kLm-0f-Uft" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-994" y="651"/>
+            <point key="canvasLocation" x="-2219" y="588"/>
         </scene>
         <!--Ajustes-->
         <scene sceneID="NQO-w1-CHY">
@@ -168,6 +140,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="changeDolarQuotation:" destination="NXK-hi-jBQ" eventType="editingChanged" id="lbC-AK-kZa"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wzz-gY-5M1">
                                 <rect key="frame" x="20" y="225" width="374" height="392"/>
@@ -203,8 +178,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="NXK-hi-jBQ" id="uar-Nh-Rhm"/>
-                                    <outlet property="delegate" destination="NXK-hi-jBQ" id="6fk-jf-bXc"/>
+                                    <outlet property="dataSource" destination="NXK-hi-jBQ" id="duZ-l4-mHK"/>
+                                    <outlet property="delegate" destination="NXK-hi-jBQ" id="JBg-oq-8cV"/>
                                 </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iti-Jw-H0l">
@@ -215,6 +190,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="changeIOFQuotation:" destination="NXK-hi-jBQ" eventType="editingChanged" id="cFV-Rx-Tqa"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,6 +222,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="BSD-qt-xtj"/>
                     <connections>
+                        <outlet property="tableView" destination="wzz-gY-5M1" id="SlW-ys-1ND"/>
                         <outlet property="tfDollar" destination="SCU-hk-g5P" id="mfz-km-BMG"/>
                         <outlet property="tfIof" destination="Iti-Jw-H0l" id="fMm-yT-FEB"/>
                     </connections>
@@ -297,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a3-PY-jie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="-245.38043478260872"/>
+            <point key="canvasLocation" x="275" y="-245"/>
         </scene>
         <!--Produto-->
         <scene sceneID="x42-P8-8ZE">
@@ -444,7 +423,7 @@
                                 <color key="backgroundColor" red="0.2307461528061735" green="0.60721270574768726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.99020309625011327" blue="0.98015760943580321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Cadatrar"/>
                                 <connections>
                                     <action selector="addUpdateProduct:" destination="PFH-Qh-UU3" eventType="touchUpInside" id="gzP-cF-qYw"/>
                                 </connections>
@@ -496,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDA-2d-kGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900.0000000000002" y="1519.5652173913045"/>
+            <point key="canvasLocation" x="-1745" y="1520"/>
         </scene>
         <!--Cadastrar Produto-->
         <scene sceneID="k2X-oW-8Mx">
@@ -516,7 +495,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7s-Lb-KCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1901" y="-244"/>
+            <point key="canvasLocation" x="-2219" y="-245"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="l3w-B2-bl2">
@@ -545,7 +524,7 @@
         <image name="tax" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oQY-hC-D9K"/>
+        <segue reference="mTq-Fb-hTq"/>
         <segue reference="xjl-is-fuW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ import AVFoundation
 class ProductsTableViewController: UITableViewController {
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
     var fetchedResultController: NSFetchedResultsController<Products>!
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +25,32 @@ class ProductsTableViewController: UITableViewController {
         label.textAlignment = .center
         
         loadProducts()
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barTintColor = .white
+        navigationItem.searchController = searchController
+    
+        searchController.searchBar.delegate = self
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     //
-    func loadProducts() {
+    func loadProducts(filtering: String = "") {
         let fetchRequest: NSFetchRequest<Products> = Products.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-        
         fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if !filtering.isEmpty {
+            let predicate = NSPredicate(format: "title contains [c] %@", filtering)
+            fetchRequest.predicate = predicate
+        }
+        
         fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultController.delegate = self
         do {
@@ -100,6 +119,22 @@ extension ProductsTableViewController: NSFetchedResultsControllerDelegate {
         default:
             tableView.reloadData()
         }
+    }
+}
+
+extension ProductsTableViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        loadProducts()
+        tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        loadProducts(filtering: searchBar.text!)
+         tableView.reloadData()
     }
 }
 

@@ -2,26 +2,30 @@
 //  StatesViewController.swift
 //  ThomasGalvao
 //
-//  Created by Thomas Galvão on 04/05/2018.
+//  Created by Thomas Galvão on 05/05/2018.
 //  Copyright © 2018 Thomas Galvao. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class StatesViewController: UIViewController , UITableViewDataSource, UITableViewDelegate {
+class StatesViewController: UIViewController {
+
     var statesManager = StatesManager.shared
     var label = UILabel()
     var formatter = NumberFormatter()
     let config = Configuration.shared
-    var states: [States]!
+    var state: States!
     
     @IBOutlet weak var tfDollar: UITextField!
     @IBOutlet weak var tfIof: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         formartView()
         loadStates()
     }
@@ -78,19 +82,13 @@ class StatesViewController: UIViewController , UITableViewDataSource, UITableVie
         tfIof.text = UserDefaults.standard.string(forKey: "iof")
     }
     
-    func save() {
-        UserDefaults.standard.set(tfDollar.text, forKey: "dollar")
-        UserDefaults.standard.set(tfIof.text, forKey: "iof")
-    }
-    
     func loadStates() {
         statesManager.loadStates(with: context)
-        //tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-        save()
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,9 +96,19 @@ class StatesViewController: UIViewController , UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func changeDolarQuotation(_ sender: UITextField) {
+        UserDefaults.standard.set(tfDollar.text, forKey: "dollar")
+    }
+    
+    @IBAction func changeIOFQuotation(_ sender: UITextField) {
+        UserDefaults.standard.set(tfIof.text, forKey: "iof")
+    }
+}
+
+extension StatesViewController : UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,19 +118,17 @@ class StatesViewController: UIViewController , UITableViewDataSource, UITableVie
             tableView.backgroundView = label
             return 0
         } else {
-            label.text = " "
-            tableView.backgroundView = label
+            
             return statesManager.states.count
         }
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellStates", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellState", for: indexPath)
         
-        //states = statesManager.states[indexPath.row]
-        //cell.prepare(with: states)
+        state = statesManager.states[indexPath.row]
+        cell.textLabel?.text = state.name
+        cell.detailTextLabel?.text = "\(state.tax)"
         return cell
     }
 }
-
-
