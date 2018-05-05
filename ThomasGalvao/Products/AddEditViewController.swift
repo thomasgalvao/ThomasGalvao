@@ -34,9 +34,9 @@ class AddEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btLabel.layer.cornerRadius = 3
+        btLabel.layer.cornerRadius = 9
         btLabel.layer.borderWidth = 1
-        btLabel.layer.borderColor = UIColor.black.cgColor
+        btLabel.layer.borderColor = UIColor.gray.cgColor
         
         statesManager.loadStates(with: context)
         
