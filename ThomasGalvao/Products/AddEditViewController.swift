@@ -22,6 +22,7 @@ class AddEditViewController: UIViewController {
     var statesManager = StatesManager.shared
     var product: Product!
     var format = NumberFormatter()
+    var camposObrigatorios = ""
     
     lazy var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -125,13 +126,23 @@ class AddEditViewController: UIViewController {
     //Adiciona Produtos no CoreData
     @IBAction func addUpdateProduct(_ sender: UIButton) {
         
+        //UIAlertController(title: "Alert", message: "teste", preferredStyle: UIAlertControllerStyle.alert)
         if product == nil {
             product = Product(context: context)
         }
         
-        product.title = tfProductName.text!
+        if tfProductName.text!.isEmpty {
+            camposObrigatorios.append("produto ")
+        } else {
+            product.title = tfProductName.text!
+        }
+        
         if let dollar = Double(tfProductPriceInDolar.text!) {
-            product.dollar = dollar
+            if dollar <= 0.0 {
+                camposObrigatorios.append("Preço ")
+            } else {
+                product.dollar = dollar
+            }
         }
         product.cover = ivProductImage.image
         product.state = statesManager.states.filter({$0.name == tfProductState.text!}).first
@@ -143,7 +154,20 @@ class AddEditViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        navigationController?.popViewController(animated: true)
+        if camposObrigatorios.isEmpty {
+            navigationController?.popViewController(animated: true)
+        } else {
+            displayAlertMessage(userMessage: "Os campos Obrigatórios \(camposObrigatorios) não foram preenchidos!")
+        }
+    }
+    
+    func displayAlertMessage(userMessage:String)
+    {
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
