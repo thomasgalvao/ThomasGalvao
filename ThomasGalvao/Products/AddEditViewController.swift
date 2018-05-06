@@ -126,25 +126,15 @@ class AddEditViewController: UIViewController {
     //Adiciona Produtos no CoreData
     @IBAction func addUpdateProduct(_ sender: UIButton) {
         
-        //UIAlertController(title: "Alert", message: "teste", preferredStyle: UIAlertControllerStyle.alert)
         if product == nil {
             product = Product(context: context)
         }
-        
-        if tfProductName.text!.isEmpty {
-            camposObrigatorios.append("produto ")
-        } else {
-            product.title = tfProductName.text!
-        }
-        
-        if let dollar = Double(tfProductPriceInDolar.text!) {
-            if dollar <= 0.0 {
-                camposObrigatorios.append("Preço ")
-            } else {
-                product.dollar = dollar
-            }
-        }
+
+        product.title = tfProductName.text!
         product.cover = ivProductImage.image
+        if let dollar = Double(tfProductPriceInDolar.text!) {
+            product.dollar = dollar
+        }
         product.state = statesManager.states.filter({$0.name == tfProductState.text!}).first
         product.card = swProductCard.isOn
         
@@ -154,13 +144,11 @@ class AddEditViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        if camposObrigatorios.isEmpty {
-            navigationController?.popViewController(animated: true)
-        } else {
-            displayAlertMessage(userMessage: "Os campos Obrigatórios \(camposObrigatorios) não foram preenchidos!")
-        }
+        //Chamada do Alert Pronto para ser usado nas validações
+        displayAlertMessage(userMessage: "Os campos Obrigatórios \(camposObrigatorios) não foram preenchidos!")
     }
     
+    //Alert das validaçoes
     func displayAlertMessage(userMessage:String)
     {
         let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
