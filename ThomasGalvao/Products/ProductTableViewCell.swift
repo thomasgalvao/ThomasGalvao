@@ -14,6 +14,8 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbDollar: UILabel!
     
+    @IBOutlet weak var viewCell: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -25,6 +27,9 @@ class ProductTableViewCell: UITableViewCell {
     }
     
     func prepare(with product: Product) {
+        
+        viewCell.layer.cornerRadius = self.ivCover.frame.size.width / 2
+
         lbTitle.text = product.title ?? ""
         lbDollar.text = "U$ "+String(format: "%.2f", product.dollar)
         if let image = product.cover as? UIImage{
