@@ -145,7 +145,9 @@ class AddEditViewController: UIViewController {
         }
         
         //Chamada do Alert Pronto para ser usado nas validações
-        displayAlertMessage(userMessage: "Os campos Obrigatórios \(camposObrigatorios) não foram preenchidos!")
+        //displayAlertMessage(userMessage: "Os campos Obrigatórios \(camposObrigatorios) não foram preenchidos!")
+        
+        navigationController?.popViewController(animated: true)
     }
     
     //Alert das validaçoes
