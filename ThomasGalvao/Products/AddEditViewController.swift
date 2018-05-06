@@ -22,7 +22,6 @@ class AddEditViewController: UIViewController {
     var statesManager = StatesManager.shared
     var product: Product!
     var format = NumberFormatter()
-    var camposObrigatorios = ""
     
     lazy var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -126,28 +125,38 @@ class AddEditViewController: UIViewController {
     //Adiciona Produtos no CoreData
     @IBAction func addUpdateProduct(_ sender: UIButton) {
         
-        if product == nil {
-            product = Product(context: context)
+        if isFormValid(){
+            if product == nil {
+                product = Product(context: context)
+            }
+            
+            product.title = tfProductName.text!
+            
+            product.cover = ivProductImage.image
+            if let dollar = Double(tfProductPriceInDolar.text!) {
+                product.dollar = dollar
+            }
+            product.state = statesManager.states.filter({$0.name == tfProductState.text!}).first
+            product.card = swProductCard.isOn
+            
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            navigationController?.popViewController(animated: true)
         }
-
-        product.title = tfProductName.text!
-        product.cover = ivProductImage.image
-        if let dollar = Double(tfProductPriceInDolar.text!) {
-            product.dollar = dollar
+        else{
+            //Chamada do Alert Pronto para ser usado nas validações
+            displayAlertMessage(userMessage: "Os campos Obrigatórios não foram preenchidos!") //ELE TA TRABANDO ATE COM VALOR
         }
-        product.state = statesManager.states.filter({$0.name == tfProductState.text!}).first
-        product.card = swProductCard.isOn
-        
-        do {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        //Chamada do Alert Pronto para ser usado nas validações
-        //displayAlertMessage(userMessage: "Os campos Obrigatórios \(camposObrigatorios) não foram preenchidos!")
-        
-        navigationController?.popViewController(animated: true)
+    }
+    
+    func isFormValid() -> Bool{
+        return !(tfProductName.text!.isEmpty
+        || tfProductPriceInDolar.text!.isEmpty
+        || tfProductState.text!.isEmpty)
     }
     
     //Alert das validaçoes
