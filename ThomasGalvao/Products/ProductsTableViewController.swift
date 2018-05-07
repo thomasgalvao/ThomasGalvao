@@ -78,11 +78,11 @@ class ProductsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let product = fetchedResultController.object(at: indexPath)
-            
             context.delete(product)
             do {
+                
                 try context.save()
-                products.remove(at: indexPath.row)
+               // products.remove(at: indexPath.row)
             } catch {
                 print(error.localizedDescription)
             }
@@ -107,15 +107,8 @@ extension ProductsTableViewController: NSFetchedResultsControllerDelegate {
         switch type {
         case .delete:
             if let indexPath = indexPath {
-                
-                do{
-                    try context.save()
-                    products.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .fade)      
 
-                } catch{
-                    print(error.localizedDescription)
-                }
             }
             break
         default:
