@@ -58,17 +58,36 @@ class StatesViewController: UIViewController {
         }
         
         alert.addAction(UIAlertAction(title: title, style: .default, handler: {
-            (action) in let state = state ?? State(context: self.context)
-            state.name = alert.textFields?.first?.text
+            (action) in
+            var erros:String = ""
             
-            guard let tax = self.formatter.number(from: (alert.textFields?[1].text!)!)?.doubleValue else { return }
-            state.tax = tax
+            if(alert.textFields?[0].text?.isEmpty == true){
+                erros.append("Campo Estado obrigatório \n")
+            }
             
-            do {
-                try self.context.save()
-                self.loadStates()
-            } catch {
-                print(error.localizedDescription)
+            if(alert.textFields?[1].text?.isEmpty == true){
+                erros.append("Campo Imposto Obrigatório \n")
+            }
+            
+            if erros.description != "" && erros.description.isEmpty == false {
+                self.showMsg(ptitle: "Erro - Atenção",pMsg: erros.description)
+            }
+            else
+            {
+                do
+                {
+                    let state = state ?? State(context: self.context)
+                    guard let tax = self.formatter.number(from: (alert.textFields?[1].text!)!)?.doubleValue else { return }
+                    
+                    state.tax = tax
+                    state.name = alert.textFields?[0].text
+                    
+                    try self.context.save()
+                    self.loadStates()
+                }
+                catch {
+                    print()
+                }
             }
         }))
         
@@ -76,7 +95,14 @@ class StatesViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
-    
+    func showMsg(ptitle: String, pMsg: String) {
+        
+        let alertController = UIAlertController(title: ptitle, message: pMsg, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     func formartView() {
         tfDollar.text = formatDouble(value: UserDefaults.standard.string(forKey: "dollar")) //TODO
         tfIof.text = formatDouble(value: UserDefaults.standard.string(forKey: "iof"))
