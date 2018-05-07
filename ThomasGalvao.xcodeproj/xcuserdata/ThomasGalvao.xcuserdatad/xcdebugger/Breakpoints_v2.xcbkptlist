@@ -253,5 +253,213 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.510535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "showAlert(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.511067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "showAlert(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.511412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "showAlert(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (__ObjC.UIAlertAction) -&gt; () in ThomasGalvao.StatesViewController.showAlert(with: Swift.Optional&lt;ThomasGalvao.State&gt;) -&gt; ()"
+                  moduleName = "ThomasGalvao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasGalvao/Library/Mobile%20Documents/com~apple~CloudDocs/ThomasGalvao/ThomasGalvao/States/StatesViewController.swift"
+                  timestampString = "547347086.853822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "1234">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (__ObjC.UIAlertAction) -&gt; () in ThomasGalvao.StatesViewController.showAlert(with: Swift.Optional&lt;ThomasGalvao.State&gt;) -&gt; ()"
+                  moduleName = "ThomasGalvao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasGalvao/Library/Mobile%20Documents/com~apple~CloudDocs/ThomasGalvao/ThomasGalvao/States/StatesViewController.swift"
+                  timestampString = "547347086.855574"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "2789">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.511734"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "showAlert(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThomasGalvao.StatesViewController.showAlert(with: Swift.Optional&lt;ThomasGalvao.State&gt;) -&gt; ()"
+                  moduleName = "ThomasGalvao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasGalvao/Library/Mobile%20Documents/com~apple~CloudDocs/ThomasGalvao/ThomasGalvao/States/StatesViewController.swift"
+                  timestampString = "547347086.863312"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "998">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (__ObjC.UIAlertAction) -&gt; () in ThomasGalvao.StatesViewController.showAlert(with: Swift.Optional&lt;ThomasGalvao.State&gt;) -&gt; ()"
+                  moduleName = "ThomasGalvao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasGalvao/Library/Mobile%20Documents/com~apple~CloudDocs/ThomasGalvao/ThomasGalvao/States/StatesViewController.swift"
+                  timestampString = "547347086.86491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.5121419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "showAlert(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.512522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "formartView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThomasGalvao/States/StatesViewController.swift"
+            timestampString = "547348746.512895"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "showAlert(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThomasGalvao.StatesViewController.showAlert(with: Swift.Optional&lt;ThomasGalvao.State&gt;) -&gt; ()"
+                  moduleName = "ThomasGalvao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasGalvao/Library/Mobile%20Documents/com~apple~CloudDocs/ThomasGalvao/ThomasGalvao/States/StatesViewController.swift"
+                  timestampString = "547347098.367299"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "998">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (__ObjC.UIAlertAction) -&gt; () in ThomasGalvao.StatesViewController.showAlert(with: Swift.Optional&lt;ThomasGalvao.State&gt;) -&gt; ()"
+                  moduleName = "ThomasGalvao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasGalvao/Library/Mobile%20Documents/com~apple~CloudDocs/ThomasGalvao/ThomasGalvao/States/StatesViewController.swift"
+                  timestampString = "547347098.3706861"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

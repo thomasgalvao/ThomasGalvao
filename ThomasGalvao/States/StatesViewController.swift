@@ -73,7 +73,6 @@ class StatesViewController: UIViewController {
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        //alert.view.tintColor = UIColor(named: "second")
         present(alert, animated: true, completion: nil)
         
     }
