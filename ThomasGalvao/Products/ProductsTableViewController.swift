@@ -14,6 +14,7 @@ class ProductsTableViewController: UITableViewController {
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
     var fetchedResultController: NSFetchedResultsController<Product>!
    var format = NumberFormatter()
+    var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,12 @@ class ProductsTableViewController: UITableViewController {
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-
+        
+        do {
+            products = try context.fetch(fetchRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
         fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultController.delegate = self
         do {
@@ -72,9 +78,11 @@ class ProductsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let product = fetchedResultController.object(at: indexPath)
+            
             context.delete(product)
             do {
                 try context.save()
+                products.remove(at: indexPath.row)
             } catch {
                 print(error.localizedDescription)
             }
@@ -99,7 +107,15 @@ extension ProductsTableViewController: NSFetchedResultsControllerDelegate {
         switch type {
         case .delete:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+                do{
+                    try context.save()
+                    products.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+
+                } catch{
+                    print(error.localizedDescription)
+                }
             }
             break
         default:

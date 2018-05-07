@@ -133,7 +133,7 @@ class AddEditViewController: UIViewController {
             product.title = tfProductName.text!
             
             product.cover = ivProductImage.image
-            if let dollar = Double(tfProductPriceInDolar.text!) {
+            if let dollar = Double(formatDouble(value: tfProductPriceInDolar.text!)) {
                 product.dollar = dollar
             }
             product.state = statesManager.states.filter({$0.name == tfProductState.text!}).first
@@ -149,8 +149,12 @@ class AddEditViewController: UIViewController {
         }
         else{
             //Chamada do Alert Pronto para ser usado nas validações
-            displayAlertMessage(userMessage: "Os campos Obrigatórios não foram preenchidos!") //ELE TA TRABANDO ATE COM VALOR
+            displayAlertMessage(userMessage: "Os campos Obrigatórios não foram preenchidos!")
         }
+    }
+    
+    func formatDouble(value:String) -> String{
+        return value.replacingOccurrences(of: ",", with: ".")
     }
     
     func isFormValid() -> Bool{

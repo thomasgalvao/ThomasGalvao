@@ -158,7 +158,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="changeDolarQuotation:" destination="NXK-hi-jBQ" eventType="editingChanged" id="lbC-AK-kZa"/>
                                 </connections>
@@ -209,7 +209,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="changeIOFQuotation:" destination="NXK-hi-jBQ" eventType="editingChanged" id="cFV-Rx-Tqa"/>
                                 </connections>
@@ -322,12 +322,12 @@
         <scene sceneID="9oW-mO-Fk7">
             <objects>
                 <viewController title="Cadastrar Produto" id="PFH-Qh-UU3" customClass="AddEditViewController" customModule="ThomasGalvao" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nh6-bn-WAx">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="nh6-bn-WAx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-CE-W8p">
-                                <rect key="frame" x="16" y="84" width="382" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-CE-W8p">
+                                <rect key="frame" x="16" y="-114" width="382" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Cm2-ew-aiZ"/>
                                 </constraints>
@@ -335,11 +335,11 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-ig-7zL">
-                                <rect key="frame" x="16" y="134" width="382" height="226"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-ig-7zL">
+                                <rect key="frame" x="16" y="-64" width="382" height="226"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da Compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-g3-ZI9">
-                                <rect key="frame" x="16" y="380" width="338" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da Compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-g3-ZI9">
+                                <rect key="frame" x="16" y="182" width="338" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="73z-qu-XRF"/>
                                 </constraints>
@@ -347,32 +347,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-Y4-CW9">
-                                <rect key="frame" x="16" y="426" width="248" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-Y4-CW9">
+                                <rect key="frame" x="16" y="228" width="248" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="e4p-0a-YvH"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-2A-vRU">
-                                <rect key="frame" x="376" y="380" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-2A-vRU">
+                                <rect key="frame" x="376" y="182" width="22" height="22"/>
                                 <connections>
                                     <segue destination="NXK-hi-jBQ" kind="show" id="xjl-is-fuW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR4-al-xPy">
-                                <rect key="frame" x="279" y="426" width="60" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cartão?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR4-al-xPy">
+                                <rect key="frame" x="279" y="228" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bvr-VG-B29">
-                                <rect key="frame" x="349" y="426" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bvr-VG-B29">
+                                <rect key="frame" x="349" y="228" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-n2-qQq">
-                                <rect key="frame" x="16" y="134" width="382" height="226"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-n2-qQq">
+                                <rect key="frame" x="16" y="-64" width="382" height="226"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="382" id="Mr4-PJ-Wen"/>
                                     <constraint firstAttribute="height" constant="226" id="oa1-1q-v9Z"/>
@@ -382,8 +382,8 @@
                                     <action selector="btAddProduct:" destination="PFH-Qh-UU3" eventType="touchUpInside" id="5fC-Ny-gex"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-UI-hOZ">
-                                <rect key="frame" x="16" y="503" width="382" height="50"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-UI-hOZ">
+                                <rect key="frame" x="16" y="305" width="382" height="50"/>
                                 <color key="backgroundColor" red="0.2307461528061735" green="0.60721270574768726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3DE-pa-Gjq"/>

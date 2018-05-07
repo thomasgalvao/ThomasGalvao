@@ -79,8 +79,8 @@ class StatesViewController: UIViewController {
     }
     
     func formartView() {
-        tfDollar.text = UserDefaults.standard.string(forKey: "dollar") //TODO
-        tfIof.text = UserDefaults.standard.string(forKey: "iof")
+        tfDollar.text = formatDouble(value: UserDefaults.standard.string(forKey: "dollar")) //TODO
+        tfIof.text = formatDouble(value: UserDefaults.standard.string(forKey: "iof"))
     }
     
     func loadStates() {
@@ -98,11 +98,11 @@ class StatesViewController: UIViewController {
     }
 
     @IBAction func changeDolarQuotation(_ sender: UITextField) {
-        UserDefaults.standard.set(tfDollar.text, forKey: "dollar")
+        UserDefaults.standard.set(formatDouble(value: tfDollar.text), forKey: "dollar")
     }
     
     @IBAction func changeIOFQuotation(_ sender: UITextField) {
-        UserDefaults.standard.set(tfIof.text, forKey: "iof")
+        UserDefaults.standard.set(formatDouble(value: tfIof.text), forKey: "iof")
     }
     
    
@@ -139,13 +139,7 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSF
         
         if editingStyle == .delete {
             statesManager.deleteState(index: indexPath.row, context: context)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            do {
-                try self.context.save()
-                self.loadStates()
-            } catch {
-                print(error.localizedDescription)
-            }
+            tableView.deleteRows(at: [indexPath], with: .fade);
         }
         
     }
@@ -157,4 +151,7 @@ extension StatesViewController : UITableViewDataSource, UITableViewDelegate, NSF
     }
     
     
+    func formatDouble(value:String?) -> String?{
+        return value?.replacingOccurrences(of: ",", with: ".")
+    }
 }

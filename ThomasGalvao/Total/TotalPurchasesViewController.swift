@@ -47,7 +47,7 @@ class TotalPurchasesViewController: UIViewController {
         }
         
         totalDollar = sumDollar
-        totalReal = results * Double(dollar!)!
+        totalReal = results * Double(formatDouble(value: dollar!))!
         
         lbTotalReal.text = String(format: "%.2f", totalReal)
         lbTotalDollar.text = String(format: "%.2f", totalDollar)
@@ -60,7 +60,10 @@ class TotalPurchasesViewController: UIViewController {
     func calculateIOFValue(value: Double, iof: Double) -> Double {
         return value * (iof / 100)
     }
-
+    
+    func formatDouble(value:String) -> String{
+        return value.replacingOccurrences(of: ",", with: ".")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
